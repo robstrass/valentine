@@ -29,8 +29,13 @@ export default function App() {
               src="https://tenor.com/view/milk-and-mocha-gif-21799600.gif"
             />
           </div>
-          <div>
+          <h1>
             YAY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+          </h1>
+          <div className="buttonContainer">
+            <button className="restartButton" onClick={() => setIsYes(false)}>
+              Restart
+            </button>
           </div>
         </>
       ) : (
