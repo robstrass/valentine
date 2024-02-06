@@ -33,7 +33,10 @@ export default function App() {
             YAY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
           </h1>
           <div className="buttonContainer">
-            <button className="restartButton" onClick={() => setIsYes(false)}>
+            <button
+              className="restartButton"
+              onClick={() => handleRestart({ setIsYes, setNoCount })}
+            >
               Restart
             </button>
           </div>
@@ -58,7 +61,7 @@ export default function App() {
             </button>
             <button
               className="noButton"
-              onClick={() => handleClick({ noCount, setNoCount })}
+              onClick={() => handleNo({ noCount, setNoCount })}
             >
               {getNoText({ noCount })}
             </button>
@@ -69,10 +72,15 @@ export default function App() {
   );
 }
 
-function handleClick({ noCount, setNoCount }) {
+function handleNo({ noCount, setNoCount }) {
   setNoCount(noCount + 1);
 }
 
 function getNoText({ noCount }) {
   return phrases[Math.min(noCount, phrases.length - 1)];
+}
+
+function handleRestart({ setIsYes, setNoCount }) {
+  setIsYes(false);
+  setNoCount(0);
 }
