@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import { phrases } from "../constants";
+import { PHRASES } from "../constants";
 import "../App.css";
 
 export default function NoComponent({ setIsYes, setNoCount, noCount }) {
@@ -46,5 +46,5 @@ function handleNo({ noCount, setNoCount }) {
 }
 
 function getNoText({ noCount }) {
-  return phrases[Math.min(noCount, phrases.length - 1)];
+  return PHRASES[Math.min(noCount, PHRASES.length - 1)];
 }

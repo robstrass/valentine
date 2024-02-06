@@ -1,4 +1,4 @@
-export const phrases = [
+export const PHRASES = [
   "No",
   "Are you sure?",
   "Mega sure?",
